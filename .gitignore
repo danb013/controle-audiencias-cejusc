@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.db
+*.xlsx
+.env
+db.sqlite3git add .
+!backend/audiencias/modelos/modelo_mensal.xlsx
+staticfiles/
+frontend_dist/
+backups/
+chave_secreta.txt
+pacote/
+db_demo.sqlite3
