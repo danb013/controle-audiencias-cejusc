@@ -143,4 +143,4 @@ O projeto é publicado no Render a partir do `Dockerfile` (compila o React e rod
 
 ## Autor
 
-**SEU NOME** · [LinkedIn](www.linkedin.com/in/danb013) · [GitHub](https://github.com/danb013)
+**Dan** · [LinkedIn](www.linkedin.com/in/danb013) · [GitHub](https://github.com/danb013)

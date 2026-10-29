@@ -1,5 +1,5 @@
 const AUTOR = "Dan";
-const LINK = "https://www.instagram.com/danbrandon.i/";
+const LINK = "www.linkedin.com/in/danb013";
 
 export default function Rodape() {
   return (
