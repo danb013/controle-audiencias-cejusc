@@ -1,5 +1,5 @@
 const AUTOR = "Dan";
-const LINK = "www.linkedin.com/in/danb013";
+const LINK = "https://www.linkedin.com/in/danb013";
 
 export default function Rodape() {
   return (
