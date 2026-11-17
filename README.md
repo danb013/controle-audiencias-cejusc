@@ -66,7 +66,6 @@ React (interface)  ──fetch /api──▶  Django REST (validação, login)
                               SQLite  ·  openpyxl ▶ Excel
 ```
 
-Decisões que valem destacar:
 
 - Regras de negócio **separadas** da API e do banco, o que facilita testar e alterar.
 - Validação **na API** (e não só na tela), para que nenhuma regra dependa do navegador.
@@ -79,67 +78,6 @@ Decisões que valem destacar:
 - Toda a API exige autenticação (verificado por testes automatizados).
 - Na demonstração online não existe `/admin`, o visitante não é administrador e só há dados fictícios.
 
-## Como rodar localmente
-
-Requisitos: Python 3.12+ e Node.js 20.19+ ou 22+.
-
-```bash
-# Backend
-cd backend
-python -m venv .venv
-.venv\Scripts\activate          # Windows
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py createsuperuser   # cria o seu usuário (administrador)
-python manage.py runserver
-
-# Frontend (outro terminal)
-cd frontend
-npm install
-npm run dev
-```
-
-Abra `http://localhost:5173` e entre com o usuário criado. O painel de administração do Django fica em `http://localhost:8000/admin`.
-
-### Testar o modo visitante (dados fictícios) localmente
-
-No terminal do backend, antes do `runserver`. No Prompt de Comando (cmd):
-
-```
-set CEJUSC_DEMO=1
-python manage.py migrate
-python manage.py popular_demo
-python manage.py runserver
-```
-
-No PowerShell, troque a primeira linha por `$env:CEJUSC_DEMO = "1"`. O modo visitante usa um banco separado (`db_demo.sqlite3`), que não toca nos seus dados.
-
-### Testes
-
-```bash
-cd backend
-pytest
-```
-
-## Publicação
-
-O projeto é publicado no Render a partir do `Dockerfile` (compila o React e roda o Django com Gunicorn). A única variável obrigatória é `CEJUSC_SECRET_KEY`. Cada `git push` na branch `main` republica o site.
-
-## Roteiro de demonstração (2 minutos)
-
-1. Clique em **Entrar como visitante**.
-2. **Lance** três audiências em sequência. Dia, vara e tipo permanecem e o cursor volta ao processo.
-3. Escolha **JEC** e veja que "Paga" fica bloqueado (regra de negócio).
-4. Altere o resultado de uma audiência com **Editar** e veja os indicadores do topo mudarem.
-5. Na aba **Relatório do mês**, filtre por conciliadora e clique em **Imprimir relatório**.
-6. **Baixe o Excel** e abra a planilha preenchida.
-
-## O que aprendi
-
-- Estruturar um projeto full stack (API REST + SPA) separando responsabilidades.
-- Modelagem de dados, migrations, validação e testes automatizados.
-- Autenticação por sessão, CSRF e boas práticas de proteção de dados (LGPD).
-- Containerização com Docker e publicação com deploy automático.
 
 ## Autor
 

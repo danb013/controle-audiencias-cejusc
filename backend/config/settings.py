@@ -38,11 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Bibliotecas adicionais
+    #bibliotecas adicionais
     "rest_framework",
     "corsheaders",
 
-    # Nosso aplicativo
+    #aplicativo
     "audiencias",
 ]
 
