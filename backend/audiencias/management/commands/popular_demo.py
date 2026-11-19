@@ -17,6 +17,7 @@ PESO_RESULTADO = {
     "prejudicada_ausencia_partes": 4,
     "cancelada": 10,
     "redesignada": 18,
+    "prejudicada_ausencia_requerente": 4,
 }
 
 
