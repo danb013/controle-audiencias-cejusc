@@ -17,6 +17,7 @@ class Resultado(str, Enum):
     FRUTIFERA = "frutifera"
     INFRUTIFERA = "infrutifera"
     PREJ_AUS_REQUERIDO = "prejudicada_ausencia_requerido"
+    PREJ_AUS_REQUERENTE = "prejudicada_ausencia_requerente"
     PREJ_AUS_PARTES = "prejudicada_ausencia_partes"
     CANCELADA = "cancelada"
     REDESIGNADA = "redesignada"

@@ -21,7 +21,7 @@ COLUNA_POR_TIPO = {"mediacao": "D", "conciliacao": "E"}
 
 BLOCOS = {
     "pre": {
-        "total_realizadas": "B10",   # frutíferas + infrutíferas do bloco
+        "total_realizadas": "B10",   # na mesma linha do rótulo REALIZADAS
         "linha_realizadas": 11,      # realizadas de cada coluna (mediação / conciliação)
         "linhas": {
             Resultado.FRUTIFERA: 12,
@@ -30,18 +30,20 @@ BLOCOS = {
             Resultado.PREJ_AUS_REQUERIDO: 15,
             Resultado.CANCELADA: 16,
             Resultado.PREJ_AUS_PARTES: 17,
+            Resultado.PREJ_AUS_REQUERENTE: 18,
         },
     },
     "processual": {
-        "total_realizadas": "B21",
-        "linha_realizadas": 22,
+        "total_realizadas": "B21",   # na mesma linha do rótulo REALIZADAS
+        "linha_realizadas": 23,      # abaixo do cabeçalho (linha 22)
         "linhas": {
-            Resultado.FRUTIFERA: 23,
-            Resultado.INFRUTIFERA: 24,
-            Resultado.PREJ_AUS_REQUERIDO: 25,
-            Resultado.PREJ_AUS_PARTES: 26,
-            Resultado.CANCELADA: 27,
-            Resultado.REDESIGNADA: 28,
+            Resultado.FRUTIFERA: 24,
+            Resultado.INFRUTIFERA: 25,
+            Resultado.PREJ_AUS_REQUERIDO: 26,
+            Resultado.PREJ_AUS_PARTES: 27,
+            Resultado.CANCELADA: 28,
+            Resultado.REDESIGNADA: 29,
+            Resultado.PREJ_AUS_REQUERENTE: 30,
         },
     },
 }

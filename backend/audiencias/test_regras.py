@@ -34,3 +34,6 @@ def test_jec_nao_pode_ser_paga():
     with pytest.raises(ValueError):
         validar_pagamento(Vara.JEC, paga=True)
     validar_pagamento(Vara.JEC, paga=False)
+
+def test_requerente_nao_conta_como_realizada():
+    assert not foi_realizada(Resultado.PREJ_AUS_REQUERENTE)
